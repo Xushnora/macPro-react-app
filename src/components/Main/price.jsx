@@ -116,11 +116,6 @@ class PriceBox extends Component {
         this.setState({subtotal: this.state.subtotal / this.state.count})
     }
 
-    handle16GB = () => {
-        this.setState({total: this.state.ramSize8 === this.state.total})
-        console.log(this.total);
-    }
-
     render() {
         return (
                 <div className="rightBox col-6">
@@ -132,30 +127,30 @@ class PriceBox extends Component {
                         <div className="ram">
                             <h4 className="ram__title">Ram</h4>
                             <div className="listBtn">
-                                <button onClick={this.handle8GB} className="ramBtn activeRam">8GB</button>
-                                <button onClick={this.handle16GB} className="ramBtn">16GB</button>
+                                <button className="ramBtn activeRam buttonFocus">8GB</button>
+                                <button className="ramBtn buttonFocus">16GB</button>
                             </div>
                         </div>
                         <div className="xotira">
                             <h4 className="ram__title">Xotira hajmi</h4>
                             <div className="listMemory">
-                                <button  className="memoryBtn activeRam">256GB</button>
-                                <button className="memoryBtn">512GB</button>
-                                <button className="memoryBtn">1TB</button>
+                                <button  className="memoryBtn activeRam buttonFocus">256GB</button>
+                                <button className="memoryBtn buttonFocus">512GB</button>
+                                <button className="memoryBtn buttonFocus">1TB</button>
                             </div>
                         </div>
                         <div className="color">
                             <h4 className="color__title">Ranglar</h4>
                             <div className="colorBtnBox">
-                                <button className="goldBtn color-btn borderActive"> 
+                                <button className="goldBtn color-btn borderActive buttonFocus"> 
                                     <span className="yellow"></span>
                                     <p className="color-name">Tilla rang</p>
                                 </button>
-                                <button className="grayBtn color-btn">
+                                <button className="grayBtn color-btn buttonFocus">
                                     <span className="gray"></span>
                                     <p className="color-name">Kumush rang</p>
                                 </button>
-                                <button className="lightGrayBtn color-btn">
+                                <button className="lightGrayBtn color-btn buttonFocus">
                                     <span className="lightGray"></span>
                                     <p className="color-name"> Kosmik kulrang</p>
                                 </button>

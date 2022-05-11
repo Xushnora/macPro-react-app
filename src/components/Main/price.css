@@ -33,6 +33,10 @@
     border-color: #06c;
 }
 
+.buttonFocus:focus {
+    border-color: #06c;
+}
+
 .ramBtnBox {
     display: flex;
     align-content: center;
