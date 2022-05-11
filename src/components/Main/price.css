@@ -1,0 +1,202 @@
+
+.ram__title {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+.ramBtn {
+    padding: 16px 10px;
+    border: 3px solid #888;
+    border-radius: 10px;
+    /* width: calc(100% + 16px); */
+    width: 182px;
+    margin-right: 16px;
+    background-color: #fff;
+    font-weight: 700;
+}
+
+.memoryBtn {
+    padding: 16px 10px;
+    border: 3px solid #888;
+    border-radius: 10px;
+    /* width: calc(100% + 16px); */
+    width: 182px;
+    margin-right: 16px;
+    background-color: #fff;
+    font-weight: 700;
+
+}
+
+
+.activeRam {
+    border-color: #06c;
+}
+
+.ramBtnBox {
+    display: flex;
+    align-content: center;
+    padding: 8px 0;
+}
+
+.listBtn {
+    display: flex;
+    align-content: center;
+    padding: 8px 0;
+}
+
+.listMemory {
+    display: flex;
+    align-content: center;
+    padding: 8px 0;
+}
+
+/* XOTIRA >>>>>>>>>>>>>>> */
+
+
+.color__title {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+.colorBtnBox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.color-btn {
+    width: 281px;
+    padding: 10px 12px;
+    border: 3px solid #888;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.yellow {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgb(210 157 0);
+}
+.gray {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: silver;
+}
+.lightGray {
+    width: 24px;
+    height: 24px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.color-name {
+    margin-top: 5px;
+    color: #000;
+    font-size: 12px;
+    margin-bottom: 0 !important;
+
+}
+
+/* INPUT   */
+
+.addBox {
+    margin-bottom: 16px;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #888;
+    border-radius: 8px;
+}
+
+.add-btn-box {
+    display: flex;
+    align-items: center;
+}
+
+.minusBtn {
+    width: 27%;
+    background-color: #fff;
+    border: none;
+    border-right: none;
+}
+
+.numberInput {
+    text-align: center;
+    display: block;
+    padding: 4px;
+    width: 80px;
+    outline: none;
+    border: 1px solid #888;
+    border-bottom: none;
+    border-top-color: transparent;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.plusBtn {
+    width: 25%;
+    background-color: #fff;
+    border: none;
+}
+
+/* Price block */
+
+.price-title {
+    color: #1d1d1d;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+}
+.price-text {
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.add-basket-btn {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #0066cc;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.combars-btn {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    color: #0066cc;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Modal Button >>>>>>>>>>>>>>>>>>>> */
+
+.desc-modalBox {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   padding-right: 30px;
+   margin-bottom: 30px;
+}
+.decs-modal {
+    border: none;
+    background-color: #fff;
+}
+.decs-modal .bx {
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+}
