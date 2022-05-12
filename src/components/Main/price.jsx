@@ -5,12 +5,83 @@ class PriceBox extends Component {
     constructor(props) {
         super(props);
         this.state = {
+          allDefault: {
+            count: 1,
+            total: 12066000,
+            subtotal: 13007500,
+            ramSize: 8,
+            memorySize: 256,
+            color1: "Gold",
+            color2: "Silver",
+            color3: "Gray"
+          }
+        }
+    }
+
+    btnHandle1 = () => {
+      console.log('ok');
+      this.setState({
+        allDefault: {
+            count: 1,
+            total: 12000000,
+            subtotal: 13600500,
+            ramSize: 8,
+            memorySize: 256,
+            color1: "Gold"
+        }
+      })
+    }
+
+    btnHandle2 = () => {
+      this.setState({
+        allDefault: {
             count: 1,
             total: 15066000,
             subtotal: 17627500,
-            ramSize8: 12000000,
-            ramSize16: 16000000
+            ramSize: 16,
+            memorySize: 256,
+            color1: "Gold"
         }
+      })
+    }
+
+    btnHandle3 = () => {
+      this.setState({
+        allDefault: {
+            count: 1,
+            total: 14066000,
+            subtotal: 18627500,
+            ramSize: 8,
+            memorySize: 512,
+            color1: "Gold"
+        }
+      })
+    }
+
+    btnHandle4 = () => {
+      this.setState({
+        allDefault: {
+            count: 1,
+            total: 16866000,
+            subtotal: 19627500,
+            ramSize: 8,
+            memorySize: 256,
+            color1: "Gold"
+        }
+      })
+    }
+
+    btnHandle5 = () => {
+      this.setState({
+        allDefault: {
+            count: 1,
+            total: 21512000,
+            subtotal: 25169000,
+            ramSize: 16,
+            memorySize: 1024,
+            color1: "Gold"
+        }
+      })
     }
 
     macObj = {
@@ -104,16 +175,20 @@ class PriceBox extends Component {
         ]
       };
 
-    handlePlus = () => {
-        this.setState({count: this.state.count + 1})
-        this.setState({total: this.state.count * this.state.total})
-        this.setState({subtotal: this.state.count * this.state.subtotal})
+    handlePlus1 = () => {
+          this.setState({count: this.state.allDefault.count + 1})
+          this.setState({total: this.state.allDefault.total + 12000000})
+          this.setState({subtotal: this.state.allDefault.subtotal + 13000000})
     }
 
-    handleMinus = () => {
-        this.setState({count: this.state.count - 1})
-        this.setState({total: this.state.total / this.state.count})
-        this.setState({subtotal: this.state.subtotal / this.state.count})
+    handleMinus1 = () => {
+      if(this.state.count <= 1) {
+        return
+      } else {
+        this.setState({count: this.state.allDefault.count - 1})
+        this.setState({total: this.state.allDefault.total - 12000000})
+        this.setState({subtotal: this.state.allDefault.subtotal - 13000000})
+      }
     }
 
     render() {
@@ -122,21 +197,21 @@ class PriceBox extends Component {
                     <div className="inScrolling">
                         <h1 className="mac__title">MacBook Air 13-inch</h1>
                         <div className="macNameBox">
-                            <h2 className="macName">M1/8/256 Gold</h2>
+                            <h2 className="macName">M1/{this.state.allDefault.ramSize}/{this.state.allDefault.memorySize} {this.state.allDefault.color1}</h2>
                         </div>
                         <div className="ram">
                             <h4 className="ram__title">Ram</h4>
                             <div className="listBtn">
-                                <button className="ramBtn activeRam buttonFocus">8GB</button>
-                                <button className="ramBtn buttonFocus">16GB</button>
+                                <button className="ramBtn activeRam buttonFocus" onClick={this.btnHandle1}>8GB</button>
+                                <button className="ramBtn buttonFocus" onClick={this.btnHandle2}>16GB</button>
                             </div>
                         </div>
                         <div className="xotira">
                             <h4 className="ram__title">Xotira hajmi</h4>
                             <div className="listMemory">
-                                <button  className="memoryBtn activeRam buttonFocus">256GB</button>
-                                <button className="memoryBtn buttonFocus">512GB</button>
-                                <button className="memoryBtn buttonFocus">1TB</button>
+                                <button  className="memoryBtn activeRam buttonFocus" onClick={this.btnHandle4}>256GB</button>
+                                <button className="memoryBtn buttonFocus" onClick={this.btnHandle3}>512GB</button>
+                                <button className="memoryBtn buttonFocus" onClick={this.btnHandle5}>1TB</button>
                             </div>
                         </div>
                         <div className="color">
@@ -158,18 +233,18 @@ class PriceBox extends Component {
                         </div>
                         <div className="addBox">
                             <div className="add-btn-box">
-                                <button onClick={this.handleMinus} className="minusBtn remov">
+                                <button onClick={this.handleMinus1} className="minusBtn remov">
                                     <i className='bx bx-minus'></i>
                                 </button>
-                                <span className="numberInput">{this.state.count}</span>
-                                <button onClick={this.handlePlus} className="plusBtn add">
+                                <span className="numberInput">{this.state.allDefault.count}</span>
+                                <button onClick={this.handlePlus1} className="plusBtn add">
                                     <i className='bx bx-plus'></i>
                                 </button>
                             </div>
                         </div>
                         <div className="price">
-                            <h3 id="priceId" className="price-title">{this.state.total} so'm</h3>
-                            <p className="price-text">17 627 500 so'm</p>
+                            <h3 id="priceId" className="price-title">{this.state.allDefault.total} so'm</h3>
+                            <p className="price-text">{this.state.allDefault.subtotal} so'm</p>
                         </div>
                         <button className="add-basket-btn">Savatchaga qo'shish</button>
                         <button className="combars-btn">Taqqoslash</button>
